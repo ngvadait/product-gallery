@@ -1,10 +1,10 @@
 import './App.css';
-import Home from "./pages/home";
+import RouterCustom from "./routes";
 
 const App = () => {
   return (
     <div className="App">
-      <Home />
+      <RouterCustom />
     </div>
   );
 }

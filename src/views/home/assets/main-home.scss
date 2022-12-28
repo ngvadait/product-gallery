@@ -32,15 +32,31 @@
     padding: 10px;
     background: #cdcaca;
     border: 1px solid #f1f1f1;
+    display: flow-root;
     .card-title {
       margin-bottom: 5px;
       font-size: 14px;
+      color: #000;
+      float: left;
+      width: 100%;
     }
     .card-text {
       color: #121212;
       float: right;
       font-size: 16px;
       font-weight: 600;
+    }
+  }
+  &:hover {
+    a {
+      img {
+        transform: scale(1.05);
+      }
+      .body_custom {
+        .card-title {
+          color: #073fb7;
+        }
+      }
     }
   }
 }

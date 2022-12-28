@@ -1,0 +1,46 @@
+.main_detail {
+  padding: 0 22px;
+  .group_button {
+    padding: 20px 0 50px;
+    button {
+      background: #073fb7;
+      border: none;
+      color: #fff;
+      border-radius: 15px;
+      padding: 2px 20px;
+      width: 150px;
+    }
+    .btn_left {
+      float: left;
+    }
+    .disabled {
+      background: #2d2e2f;
+    }
+    .btn_right {
+      float: right;
+    }
+  }
+  .details_right {
+    text-align: left;
+    padding-left: 15px;
+    .details_title {
+      font-weight: bold;
+    }
+    .details_info {
+      .details-item {
+        margin-bottom: 0;
+        font-weight: 600;
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+    .details_overview {
+      color: #6a6a6a;
+    }
+  }
+  .empty_data {
+    text-align: center;
+    padding-top: 20px;
+  }
+}

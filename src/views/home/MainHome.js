@@ -1,5 +1,5 @@
 import {Card, Col} from "react-bootstrap";
-// import {getImage} from "@Common/helper";
+import { Link } from "react-router-dom";
 import "./assets/main-home.scss";
 import AsyncImage from "../layout/AsyncImage";
 import {numberFormat} from "../../common/helper";
@@ -26,25 +26,23 @@ const MainHome = ({...props}) => {
           return (
             <Col xs={6} sm={4} lg={3} key={item.id} className="mb-3">
               <Card className='h-100 card_custom'>
-                <AsyncImage
-                  title={item.title}
-                  alt={item.title}
-                  variant="top"
-                  loading="lazy"
-                  src={item.thumbnail}
-                />
-                <Card.Body className="body_custom">
-                  <Card.Title>
-                    {item.title}
-                  </Card.Title>
-                  <div >
-
-                  </div>
-                  <Card.Text>
-                    {numberFormat(item.price)}
-                    {/*{convertDate(item)}*/}
-                  </Card.Text>
-                </Card.Body>
+                <Link to={`/detail/${item.id}`}>
+                  <AsyncImage
+                    title={item.title}
+                    alt={item.title}
+                    variant="top"
+                    loading="lazy"
+                    src={item.thumbnail}
+                  />
+                  <Card.Body className="body_custom">
+                    <Card.Title>
+                      {item.title}
+                    </Card.Title>
+                    <Card.Text>
+                      {numberFormat(item.price)}
+                    </Card.Text>
+                  </Card.Body>
+                </Link>
               </Card>
             </Col>
           )
