@@ -1,14 +1,21 @@
 import baseRequest from "../baseRequest";
 
-export const fetchProducts = async (page) => {
+export const fetchProducts = async (page, query) => {
   let products = [];
   let totalResults = 0;
+  let url = '';
   let params = {
     limit: 8,
     skip: 8 * page - 8
   };
 
-  await baseRequest.get(`/products`, {
+  if (query.length) {
+    url = `/products/search?q=${query}`
+  } else {
+    url = `/products`;
+  }
+
+  await baseRequest.get(url, {
     params: params
   }).then(res => {
     products = res.data.products;

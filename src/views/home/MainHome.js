@@ -24,7 +24,7 @@ const MainHome = ({...props}) => {
       ) : listProducts.length ? (
         listProducts.map((item) => {
           return (
-            <Col xs={6} sm={4} lg={3} key={item.id} className="mb-3">
+            <Col xs={6} sm={4} lg={3} key={item.id + '-' + item.title} className="mb-3">
               <Card className='h-100 card_custom'>
                 <Link to={`/detail/${item.id}`}>
                   <AsyncImage
