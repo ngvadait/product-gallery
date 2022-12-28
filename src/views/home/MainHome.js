@@ -10,7 +10,7 @@ const MainHome = ({...props}) => {
 
   return (
     <>
-      {isLoading ? (
+      {isLoading && !listProducts.length ? (
         Array.from(Array(4).keys()).map((_, index) => (
           <Col
             xs={6}
